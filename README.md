@@ -36,7 +36,7 @@ flux bootstrap github \
 3. Create a GitRepository manifest pointing to fruits repository’s master branch:
 ```sh
 flux create source git fruits \
-    --namespace=default \
+    --namespace=flux-system \
     --url=https://github.com/fernandoocampo/fruits \
     --branch=master \
     --interval=60s \
