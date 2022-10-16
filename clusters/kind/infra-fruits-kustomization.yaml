@@ -5,7 +5,7 @@ metadata:
   name: infra-fruits
   namespace: flux-system
 spec:
-  interval: 5m0s
+  interval: 2m30s
   path: ./crossplane/kustomize
   prune: true
   sourceRef:
