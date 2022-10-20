@@ -64,3 +64,7 @@ flux create kustomization fruits \
 ```sh
 kubectl describe -n flux-system gitrepository flux-system
 ```
+
+## Monitoring with prometheus and grafana.
+
+Follow this [tutorial](https://fluxcd.io/flux/guides/monitoring/)
