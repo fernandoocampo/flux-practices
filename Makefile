@@ -6,3 +6,6 @@ ip-localstack:
 
 describe-lambda:
 	kubectl describe Function gofunction
+
+reconcile:
+	flux reconcile kustomization fruits

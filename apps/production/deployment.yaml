@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: fruits
-          image: fdocampo/frutal:v0.2.1
+          image: fdocampo/frutal:v0.3.0
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
