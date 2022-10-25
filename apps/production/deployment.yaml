@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fruits-deployment
+  name: fruits
   labels:
     app: fruits
 spec:
