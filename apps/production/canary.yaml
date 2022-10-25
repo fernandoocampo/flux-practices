@@ -46,13 +46,13 @@ spec:
         interval: 30s
     # acceptance/load testing hooks
     webhooks:
-      - name: smoke-test
-        type: pre-rollout
-        url: http://flagger-loadtester.test/
-        timeout: 15s
-        metadata:
-          type: bash
-          cmd: "curl -sd 'anon' http://fruits-canary.test:8080/home | grep Products"
+      # - name: smoke-test
+      #   type: pre-rollout
+      #   url: http://flagger-loadtester.test/
+      #   timeout: 15s
+      #   metadata:
+      #     type: bash
+      #     cmd: "curl -sd 'anon' http://fruits-canary.test:8080/home | grep Products"
       - name: load-test
         url: http://flagger-loadtester.test/
         timeout: 5s
