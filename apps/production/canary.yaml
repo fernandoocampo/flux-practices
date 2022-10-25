@@ -51,10 +51,10 @@ spec:
         timeout: 15s
         metadata:
           type: bash
-          cmd: "curl -sd 'anon' http://fruits-canary.test:8080/home | grep Products"
+          cmd: "curl -sd 'anon' http://fruits-canary:8080/home | grep Products"
       - name: load-test
         url: http://flagger-loadtester.test/
         timeout: 5s
         metadata:
           type: cmd
-          cmd: "hey -z 1m -q 10 -c 2 http://fruits-canary.test:8080/"
+          cmd: "hey -z 1m -q 10 -c 2 http://fruits-canary:8080/"
