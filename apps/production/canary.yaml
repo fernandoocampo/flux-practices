@@ -2,7 +2,6 @@ apiVersion: flagger.app/v1beta1
 kind: Canary
 metadata:
   name: fruits
-  namespace: test
 spec:
   # service mesh provider can be: kubernetes, istio, appmesh, nginx, gloo
   provider: kubernetes
@@ -46,6 +45,9 @@ spec:
         interval: 30s
     # acceptance/load testing hooks
     webhooks:
+      - name: "start gate"
+        type: confirm-rollout
+        url: http://flagger-loadtester.test/gate/approve
       # - name: smoke-test
       #   type: pre-rollout
       #   url: http://flagger-loadtester.test/
@@ -53,9 +55,9 @@ spec:
       #   metadata:
       #     type: bash
       #     cmd: "curl -sd 'anon' http://fruits-canary.test:8080/home | grep Products"
-      - name: load-test
-        url: http://flagger-loadtester.test/
-        timeout: 5s
-        metadata:
-          type: cmd
-          cmd: "hey -z 1m -q 10 -c 2 http://fruits-canary.test:8080/"
+      # - name: load-test
+      #   url: http://flagger-loadtester.test/
+      #   timeout: 5s
+      #   metadata:
+      #     type: cmd
+      #     cmd: "hey -z 1m -q 10 -c 2 http://fruits-canary.test:8080/"
