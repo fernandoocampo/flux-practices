@@ -48,6 +48,9 @@ spec:
       - name: "start gate"
         type: confirm-rollout
         url: http://flagger-loadtester.test/gate/approve
+      - name: "promotion gate"
+        type: confirm-promotion
+        url: http://flagger-loadtester.test/gate/approve
       # - name: smoke-test
       #   type: pre-rollout
       #   url: http://flagger-loadtester.test/

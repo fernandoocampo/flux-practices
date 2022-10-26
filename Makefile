@@ -9,3 +9,6 @@ describe-lambda:
 
 reconcile:
 	flux reconcile kustomization fruits
+
+check:
+	flux check
