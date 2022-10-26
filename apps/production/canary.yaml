@@ -51,13 +51,13 @@ spec:
       - name: "promotion gate"
         type: confirm-promotion
         url: http://flagger-loadtester.test/gate/approve
-      # - name: smoke-test
-      #   type: pre-rollout
-      #   url: http://flagger-loadtester.test/
-      #   timeout: 15s
-      #   metadata:
-      #     type: bash
-      #     cmd: "curl -sd 'anon' http://fruits-canary.test:8080/home | grep Products"
+      - name: smoke-test
+        type: pre-rollout
+        url: http://flagger-loadtester.test/
+        timeout: 15s
+        metadata:
+          type: bash
+          cmd: "curl -sd 'anon' http://fruits-canary.default:8080/home | grep success"
       # - name: load-test
       #   url: http://flagger-loadtester.test/
       #   timeout: 5s
