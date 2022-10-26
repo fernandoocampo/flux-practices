@@ -5,6 +5,7 @@ metadata:
   labels:
     app: fruits
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: fruits
